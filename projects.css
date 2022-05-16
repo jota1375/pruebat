@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #05142b;
+}
+
+
+header {
+    width: 100%;
+    height: 60px;
+  }
+  
+  header .header_icons_container {
+    width: 100%;
+    height: 60px;
+    display: grid;
+    
+  }
+  
+  header .header_icons_container .icons {
+    width: 250px;
+    height: auto;
+    display: flex;
+    justify-items: flex-end;
+    align-items: center;
+    justify-content: space-between;
+    justify-self: end;
+    margin-right: 40px;
+  }
+  
+  header .icons span {
+    color: #5e70f6;
+  }
+
+  header .icons i{
+    color: #5e70f6;
+    transition: all .30s;
+  }
+
+  header .icons i:hover{
+    transform: translateY(-5px);
+    color: white;
+  }
+
+
+.container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20PX;
+}
+
+.card{
+    background: white;
+    width: 200px;
+    
+    margin: 15px;
+    border-radius: 15px;
+}
+
+.card-image{
+    background-color: aqua;
+    height: 170px;
+    margin-bottom: 15px;
+    background-size: cover;
+    border-radius: 15px 15px 0 0;
+}
+
+.img-1{
+    background-image: url(./img/img_html.jpg);
+}
+.img-2{
+    background-image: url(./img/img_css.jpg);
+}
+.img-3{
+    background-image: url(./img/img_javascript.jpg);
+}
+.img-4{
+    background-image: url(./img/img_python.jpg);
+}
+.img-5{
+    background-image: url(./img/poster_gym_2.jpg);
+}
+
+.img-6{
+    background-image:url(./img/poster_gym_1.jpg) ;
+}
+
+
+.card h2{
+    text-align: center;
+}
+
+
+.card p{
+    padding: 10px;
+    text-align: center;
+}
+
+.card a{
+    background-color: #22577e;
+    color: aliceblue;
+    padding: 15px 20px;
+    display: block;
+    text-align: center;
+    margin: 20px 50px;
+    text-decoration: none;
+    border-radius: 15px;
+}
+
+.card:hover{
+    background-color: grey;
+    color: aliceblue;
+    cursor: pointer;
+    transform: scale(1.02);
+    transition: all 1s ease;
+}
+
+.card:hover a:hover{
+    background-color: #2398eb;
+}
+
+.boton_home {
+    width: 100%;
+    height: auto;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+.btn_neon1 {
+    width: 150px;
+    height: 45px;
+    border: 1px solid #5e70f6;
+    border-radius: 20px;
+    display: block;
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+    color: #5e70f6;
+    letter-spacing: 4px;
+    font-size: 22px;
+    text-decoration: none;
+    overflow: hidden;
+    transition: 0.2s;
+    text-shadow: 0 10px 20px black;
+    font-weight: bolder;
+  }
+  
+  .btn_neon1:hover {
+    background: #5e70f6;
+    box-shadow: 0 0 10px rgb(36, 167, 228), 0 0 40px rgb(36, 167, 228),
+      0 0 80px rgb(135, 36, 228);
+    transition-delay: 0.2s;
+    border-radius: 15px;
+    color: white;
+  }

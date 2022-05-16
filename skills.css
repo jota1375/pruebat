@@ -1,0 +1,648 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    background: #05142b;
+  }
+
+
+  header {
+    width: 100%;
+    height: 60px;
+  }
+  
+  header .header_icons_container {
+    width: 100%;
+    height: 60px;
+    display: grid;
+  }
+  
+  header .header_icons_container .icons {
+    width: 250px;
+    height: auto;
+    display: flex;
+    justify-items: flex-end;
+    align-items: center;
+    justify-content: space-between;
+    justify-self: end;
+    margin-right: 40px;
+  }
+  
+  header .icons span {
+    color: #5e70f6;
+  }
+
+  header .icons i{
+    color: #5e70f6;
+    transition: all .30s;
+  }
+
+  header .icons i:hover{
+    transform: translateY(-5px);
+    color: white;
+  }
+  
+  .main {
+    height: 50px;
+  }
+  
+  .main__container {
+    margin-top: 20px;
+  }
+  
+  .main__title {
+    color: #1e84eb;
+    font-weight: 130;
+    font-size: 60px;
+    text-shadow: #62a7f5 0.1em 0.1em 0.1em;
+  }
+  
+  .main__pa {
+    color: bisque;
+    font-size: 20px;
+  }
+  
+  .main__container {
+    text-align: center;
+  }
+  
+  .Categories__title {
+    color: bisque;
+    font-size: 25px;
+    position: absolute;
+    padding-left: 30px;
+    width: 100%;
+    margin-top: 0px;
+    height: 10px;
+  }
+  
+  /*
+  .sub_title {
+    color: #ab88ff;
+    font-size: 20px;
+    letter-spacing: 2px;
+  }
+  */
+  /*
+  .carrousel {
+      overflow:scroll;
+      padding: 15px30px;
+      position: relative;
+      width:100%;
+      }
+  
+  .carrousel::-webkit-scrollbar {
+      background-color: #5eaaa8;
+      height: 10px;
+      padding-top: 10px;
+      }
+  
+  .carrousel::-webkit-scrollbar-thumb {
+      background-color: rgba(255, 255, 255, 0.1);
+      border: 20px solid #a3d2ca;
+      border-radius: 10px;
+      }
+  */
+  
+  
+  /*
+  .carrousel::-webkit-scrollbar {
+    background-color: rgb(7, 107, 165);
+    border-radius: 30px;
+    height: 10px;
+    width: 0px;
+  }
+  
+  .carrousel::-webkit-scrollbar-thumb {
+    background-color: #ab88ff;
+    border-radius: 10px;
+    height: 10px;
+  }
+  
+  .carrousel::-moz-scrollbar {
+    background-color: rgb(248, 237, 237);
+    border-radius: 50px;
+    height: 30px;
+    width: 0px;
+  }
+  
+  .carrousel::-moz-scrollbar-thumb {
+    background-color: #ab88ff;
+    border-radius: 10px;
+    height: 10px;
+  }
+  
+  .carrousel::-o-scrollbar {
+    background-color: rgb(233, 221, 221);
+    border-radius: 50px;
+    height: 10px;
+    width: 0px;
+  }
+  
+  .carrousel::-o-scrollbar-thumb {
+    background-color: #ab88ff;
+    border-radius: 10px;
+    height: 10px;
+  }
+  
+
+  .carrousel {
+    width: 100%;
+    height: 450px;
+    overflow: scroll;
+    padding: 10px;
+    position: relative;
+  }
+  */
+  
+  .carrousel {
+    width: 100%;
+    overflow: scroll;
+    padding: 20px;
+    position: relative;
+  }
+  
+  .carrousel__container {
+      width: 100%;
+      height: auto;
+      display: flex;
+      flex-direction: row;
+      justify-content:space-around;
+      flex-flow: wrap;
+    /*white-space: nowrap;*/
+    margin: 30px 0px;
+    padding-bottom: 15px;
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .carrousel-item {
+    background-color: rgb(84, 188, 192);
+    width: 100px;
+    height: 210px;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-right: 10px;
+    margin-top: 10px;
+    display: inline-block;
+    cursor: pointer;
+    transition: 450ms all;
+    transform-origin: center left;
+    position: relative;
+    box-shadow: 0px 0px 10px #f5af5f;
+  }
+  
+  .carrousel-item:hover ~ .carrousel-item {
+    transform: translate3d(40px, 0, 0);
+  }
+  
+  .carrousel__container:hover .carrousel-item {
+    opacity: 0.1;
+  }
+  
+  .carrousel__container:hover .carrousel-item:hover {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  
+  .carrousel-item__img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    margin-top: 15px;
+  }
+  
+  .carrousel-item__details {
+    background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.9) 0%,
+      rgba(0, 0, 0, 0.9) 100%
+    );
+    font-size: 10px;
+    opacity: 0;
+    transition: 450ms opacity;
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: flex-end;
+  }
+  
+  .carousel-item__details:hover {
+    opacity: 1;
+  }
+  
+  .carousel-item__details--icon {
+    width: 25px;
+    height: 25px;
+  }
+  
+  .carousel-item__details--title,
+  .carousel-item__details--subtitle {
+    color: #ffffff;
+  }
+  .carousel-item__details p {
+    margin: 2px 0px;
+  }
+  
+  .carousel-item__details--title {
+    font-size: 10px;
+  }
+  
+  .carrousel-item__details {
+    background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.9) 0%,
+      rgba(0, 0, 0, 0.9) 100%
+    );
+    font-size: 10px;
+    opacity: 0;
+    transition: 450ms opacity;
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: flex-end;
+  }
+  
+  .carousel-item__details:hover {
+    opacity: 1;
+  }
+  
+  .carousel-item__details--icon {
+    width: 25px;
+    height: 25px;
+  }
+  
+  .carousel-item__details--title,
+  .carousel-item__details--subtitle {
+    color: #ffffff;
+  }
+  .carousel-item__details p {
+    margin: 2px 0px;
+  }
+  
+  .carousel-item__details--title {
+    font-size: 10px;
+  }
+  
+  .carrousel-logo {
+    width: 30px;
+    height: 30px;
+    margin-top: 10px;
+  }
+  
+  #img_certificado {
+    display: none;
+  }
+  
+  .stars {
+    width: 16px;
+  }
+  
+  .ventana {
+    position: absolute;
+    left: 30%;
+    background-image: url(img/certificado_Udemy_Js.jpg);
+    background-position:center;
+    background-size: 40% 30%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 60%;
+    padding: 10px;
+    border-radius: 20px;
+    min-height: 500px;
+    display: none;
+  }
+  
+  #cerrar_vent_js {
+    position: absolute;
+    right: 15px;
+    top: 20px;
+  }
+  
+  .t_js {
+    text-decoration: none;
+    color: #145291;
+  }
+  
+  .t_js:hover {
+    color: #4a5f75;
+  }
+  
+  .ventana_css {
+    position: absolute;
+    left: 20%;
+    background-image: url(img/ciclo2_Mintic.jpg);
+    background-position: center;
+    background-size: 40% 30%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 60%;
+    padding: 10px;
+    border-radius: 20px;
+    min-height: 500px;
+    display: none;
+  }
+  
+  #cerrar_vent_css {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+  }
+  
+  .t_css {
+    text-decoration: none;
+    color: #145291;
+  }
+  
+  .t_css:hover {
+    color: #4a5f75;
+  }
+  
+  .ventana_html {
+    position: absolute;
+    left: 30%;
+    background-image: url(img/Mintic800hr.png);
+    background-position: center;
+    background-size: 40% 30%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 60%;
+    padding: 10px;
+    border-radius: 20px;
+    min-height: 500px;
+    display: none;
+  }
+  
+  #cerrar_vent_html {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+  }
+  
+  .t_html {
+    text-decoration: none;
+    color: #145291;
+  }
+  
+  .t_html:hover {
+    color: #4a5f75;
+  }
+  
+  .ventana_py {
+    position: absolute;
+    left: 30%;
+    background-image: url(img/python_200hrs.png);
+    background-position: center;
+    background-size: 40% 30%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 60%;
+    padding: 10px;
+    border-radius: 20px;
+    min-height: 500px;
+    display: none;
+  }
+  
+  #cerrar_vent_py {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+  }
+  
+  .t_py {
+    text-decoration: none;
+    color: #145291;
+  }
+  
+  .t_py:hover {
+    color: #4a5f75;
+  }
+  
+  .ventana_jv {
+    position: absolute;
+    left: 30%;
+    background-image: url(img/cert_java_200hrs.png);
+    background-position: center;
+    background-size: 40% 30%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 60%;
+    padding: 10px;
+    border-radius: 20px;
+    min-height: 500px;
+    display: none;
+  }
+  
+  #cerrar_vent_jv {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+  }
+  
+  .t_jv {
+    text-decoration: none;
+    color: #145291;
+  }
+  
+  .t_jv:hover {
+    color: #4a5f75;
+  }
+  
+  .ventana_gh {
+    position: absolute;
+    left: 30%;
+    background-image: url(img/cert_Git.jpg);
+    background-position: center;
+    background-size: 40% 30%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 60%;
+    padding: 10px;
+    border-radius: 20px;
+    min-height: 500px;
+    display: none;
+  }
+  
+  #cerrar_vent_gh {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+  }
+  
+  .t_gh {
+    text-decoration: none;
+    color: #145291;
+  }
+  
+  .t_gh:hover {
+    color: #4a5f75;
+  }
+  
+  .ventana_ps {
+    position: absolute;
+    left: 30%;
+    background-image: url(img/Photshop_platzi.png);
+    background-position: center;
+    background-size: 40% 30%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 60%;
+    padding: 10px;
+    border-radius: 20px;
+    min-height: 500px;
+    display: none;
+    
+  }
+  
+  #cerrar_vent_ps {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+  }
+  
+  .t_ps {
+    text-decoration: none;
+    color: #145291;
+  }
+  
+  .t_ps:hover {
+    color: #4a5f75;
+  }
+  
+  .ventana_ai {
+    position: absolute;
+    left: 30%;
+    background-image: url(img/cert_illustrator.jpg);
+    background-position: center;
+    background-size: 40% 30%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 60%;
+    padding: 10px;
+    border-radius: 20px;
+    min-height: 500px;
+    display: none;
+  }
+  
+  #cerrar_vent_ai {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+  }
+  
+  .t_ai {
+    text-decoration: none;
+    color: #145291;
+  }
+  
+  .t_ai:hover {
+    color: #4a5f75;
+  }
+  
+  .ventana_idg {
+    position: absolute;
+    left: 30%;
+    background-image: url(img/Mintic800hr.png);
+    background-position: center;
+    background-size: 40% 30%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 60%;
+    padding: 10px;
+    border-radius: 20px;
+    min-height: 500px;
+    display: none;
+  }
+  
+  #cerrar_vent_idg {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+  }
+  
+  .t_idg {
+    text-decoration: none;
+    color: #145291;
+  }
+  
+  .t_idg:hover {
+    color: #4a5f75;
+  }
+  
+  .btn_go {
+    width: 100%;
+    height: auto;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .btn_home {
+    margin-top: 15px;
+    margin-right: 10px;
+    border: none;
+    outline: none;
+    background-color: inherit;
+    padding: 5px 35px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #5e70f6;
+    border-radius: 40px;
+    border: 3px solid #5e70f6;
+    transition: 0.5s ease all;
+  }
+  
+  .btn_home:hover {
+    background-color: #5e70f6;
+    color: white;
+  }
+  
+  .btn_home a {
+    text-decoration: none;
+    color: #5e70f6;
+  }
+  
+  .btn_home a:hover {
+    color: white;
+  }
+  
+  .btn_Pro {
+      margin-top: 15px;
+    border: none;
+    outline: none;
+    background-color: inherit;
+    padding: 5px 15px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #5e70f6;
+    border-radius: 40px;
+    border: 3px solid #5e70f6;
+    transition: 0.5s ease all;
+  }
+  
+  .btn_Pro:hover {
+    background-color: #5e70f6;
+    color: white;
+  }
+  
+  .btn_Pro a {
+    text-decoration: none;
+    color: #5e70f6;
+  }
+  
+  .btn_Pro a:hover {
+    color: white;
+  }
+

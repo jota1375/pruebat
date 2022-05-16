@@ -1,0 +1,32 @@
+@media screen and (max-width: 370px) {
+  .container {
+    display: flexbox;
+    flex-direction: column;
+    
+    
+  }
+  .card {
+    width: 140px;
+    height: 140px;
+    margin-left: 70px;
+    
+  }
+  .card-image{
+    width: 200px;
+    height: 200px;
+    
+  }
+    
+}
+
+@media screen and (max-width: 330px) {
+  .flex-container {
+    display: flexbox;
+    flex-direction: column;
+    overflow: scroll;
+  }
+  .form {
+    width: 140px;
+   
+  } 
+}
